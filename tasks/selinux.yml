@@ -1,0 +1,13 @@
+---
+# Template configuration files for firewalld
+
+- name: Set SELinux booleans
+  seboolean:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+    persistent: "{{ item.persistent | default('false') }}"
+  loop: "{{ firewalld_selinux_booleans }}"
+  when:
+    - ansible_selinux.status == "enabled"
+    - firewalld_enable_selinux
+  become: true
