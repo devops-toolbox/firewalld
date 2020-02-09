@@ -8,10 +8,10 @@ firewalld: Firewalld
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.firewalld](https://galaxy.ansible.com/devops-toolbox.firewalld)
+[https://galaxy.ansible.com/devopstoolbox.firewalld](https://galaxy.ansible.com/devopstoolbox.firewalld)
 
 ```bash
-ansible-galaxy install devops-toolbox.firewalld
+ansible-galaxy install devopstoolbox.firewalld
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: firewalld is configured
       import_role:
-        name: devops-toolbox.firewalld
+        name: devopstoolbox.firewalld
       vars:
         firewalld_packages_state: present
         firewalld_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
